@@ -12,6 +12,7 @@ namespace LisburnPizzabois
 {
     public partial class frmInvoice : Form
     {
+        private PrintDocument printDocument1 = new PrintDocument();
         public frmInvoice()
         {
             InitializeComponent();
@@ -24,7 +25,7 @@ namespace LisburnPizzabois
 
         private void Exit()
         {
-            Application.Exit;
+            Application.Exit();
         }
 
         private void frmInvoice_Activated(object sender, EventArgs e)
@@ -51,7 +52,7 @@ namespace LisburnPizzabois
             DialogResult userresponse;
             PrintDialog.Document = printDocument1;
             userresponse = printDialog1.ShowDialog();
-            if (userresponse = System.Windows.Forms.DialogResult.OK)
+            if (userresponse == System.Windows.Forms.DialogResult.OK)
             {
                 printDocument1.Print();
             }
@@ -92,7 +93,13 @@ namespace LisburnPizzabois
             //font
             Font fontMedium = new Font("Arial", 14);
             Font fontLargeBold = new
-                   Font("Arial", 14);
+                   Font("Arial", 36, FontStyle.Bold);
+
+            //Brush
+            Brush brushBlue = new SolidBrush(Color.Blue);
+            Brush brushBlack = Brushes.Black;
+
         }
+
     }
 }
