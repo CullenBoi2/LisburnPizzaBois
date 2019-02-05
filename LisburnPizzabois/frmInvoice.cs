@@ -81,7 +81,7 @@ namespace LisburnPizzabois
         private void btnPrint_Click(object sender, EventArgs e)
         {
             DialogResult userresponse;
-            printDialog1.Document = printDocument2;
+            printDialog1.Document = printDocument1;
             userresponse = printDialog1.ShowDialog();
             if (userresponse == System.Windows.Forms.DialogResult.OK)
             {
@@ -89,6 +89,15 @@ namespace LisburnPizzabois
             }
 
         }
+         private void myPrintPage(object sender, PrintPageEventsArgs e)
+        {
+            Single vPos = 0;
+            Single hPos = 0;
 
+            //font
+            Font fontMedium = newFont("Arial", 14);
+            Font fontLargeBold = new
+                   Font("Arial", 14);
+        }
     }
 }
