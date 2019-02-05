@@ -33,11 +33,12 @@
             this.btnPrintPreview = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblTotalID = new System.Windows.Forms.Label();
             this.lblSubtotal = new System.Windows.Forms.Label();
             this.lblDiscountD = new System.Windows.Forms.Label();
             this.lblSubtotalD = new System.Windows.Forms.Label();
             this.btnPrint = new System.Windows.Forms.Button();
+            this.lblName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnEnd
@@ -88,14 +89,14 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Discount";
             // 
-            // label3
+            // lblTotalID
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(126, 114);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Total";
+            this.lblTotalID.AutoSize = true;
+            this.lblTotalID.Location = new System.Drawing.Point(126, 114);
+            this.lblTotalID.Name = "lblTotalID";
+            this.lblTotalID.Size = new System.Drawing.Size(31, 13);
+            this.lblTotalID.TabIndex = 5;
+            this.lblTotalID.Text = "Total";
             // 
             // lblSubtotal
             // 
@@ -131,16 +132,26 @@
             this.btnPrint.UseVisualStyleBackColor = true;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(207, 38);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(79, 13);
+            this.lblName.TabIndex = 10;
+            this.lblName.Text = "CustomerName";
+            // 
             // frmInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.lblSubtotalD);
             this.Controls.Add(this.lblDiscountD);
             this.Controls.Add(this.lblSubtotal);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblTotalID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnPrintPreview);
@@ -160,10 +171,11 @@
         private System.Windows.Forms.Button btnPrintPreview;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTotalID;
         private System.Windows.Forms.Label lblSubtotal;
         private System.Windows.Forms.Label lblDiscountD;
         private System.Windows.Forms.Label lblSubtotalD;
         private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Label lblName;
     }
 }

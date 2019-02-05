@@ -31,24 +31,19 @@ namespace LisburnPizzabois
         {
             //code to read variables in other forms
 
-            lblname.text = frmlogin.strName + " Please see below invoice";
+            lblName.text = frmLogin.sname + " Please see below invoice";
             //make sure variables in previous forms are global
-            lblDiscountD.text = frmPizza.dDiscount.ToString("#0.00");
-            lblTotalD.Text = frmPizza.dSubTotal.ToString("#0.00");
-            lblSubtotalD.Text = frmPizza.dTotal.ToString("#0.00");
+            lblDiscountD.text = FrmPizza.dDiscount.ToString("#0.00");
+            lblTotalD.Text = FrmPizza.dSubTotal.ToString("#0.00");
+            lblSubtotalD.Text = FrmPizza.dTotal.ToString("#0.00");
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
             //open frmPizza
-            frmPizza sw = new frmLogin();
-
-            //hide form
-            this.Hide();
-
-            //show form
-            sw.Show();
-
+            FrmPizza ThePizzaForm;
+            ThePizzaForm = new FrmPizza();
+            ThePizzaForm.ShowDialog();
         }
 
         private void btnPrintPreview_Click(object sender, EventArgs e)
@@ -95,7 +90,7 @@ namespace LisburnPizzabois
             Single hPos = 0;
 
             //font
-            Font fontMedium = newFont("Arial", 14);
+            Font fontMedium = new Font("Arial", 14);
             Font fontLargeBold = new
                    Font("Arial", 14);
         }

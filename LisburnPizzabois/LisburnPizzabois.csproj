@@ -66,6 +66,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmInvoice.resx">
+      <DependentUpon>frmInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPizza.resx">
       <DependentUpon>FrmPizza.cs</DependentUpon>
     </EmbeddedResource>
