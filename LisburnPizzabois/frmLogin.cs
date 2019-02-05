@@ -84,9 +84,9 @@ namespace LisburnPizzabois
             //if yes then close program
             if (dr == DialogResult.Yes)
             {
-                /*frmPizza ThePizzaForm;
+                frmPizza ThePizzaForm;
                 ThePizzaForm = new frmPizza();
-                ThePizzaForm.ShowDialog(); */
+                ThePizzaForm.ShowDialog(); 
             }
         }
 
