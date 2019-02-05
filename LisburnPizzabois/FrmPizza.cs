@@ -24,7 +24,7 @@ namespace LisburnPizzabois
         private void pichawaiian_mouseLeave(object sender, EventArgs e)
         {
             //code to clear the pizza name and price display
-            Pizzalbl = "";
+            Pizzalbl.Text = string.Empty; 
         }
         private void RegularCustomer_Click(object sender, EventArgs e)
         {
