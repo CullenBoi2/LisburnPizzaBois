@@ -12,6 +12,7 @@ namespace LisburnPizzabois
 {
     public partial class frmInvoice : Form
     {
+        private PrintDocument printDocument1 = new PrintDocument();
         public frmInvoice()
         {
             InitializeComponent();
@@ -24,18 +25,18 @@ namespace LisburnPizzabois
 
         private void Exit()
         {
-            Application.Exit;
+            Application.Exit();
         }
 
         private void frmInvoice_Activated(object sender, EventArgs e)
         {
             //code to read variables in other forms
 
-            lblname.text = frmlogin.strName + " Please see below invoice";
+            lblName.Text = frmlogin.strName + " Please see below invoice";
             //make sure variables in previous forms are global
-            lblDiscountD.text = frmPizza.dDiscount.ToString("#0.00");
-            lblTotalD.Text = frmPizza.dSubTotal.ToString("#0.00");
-            lblSubtotalD.Text = frmPizza.dTotal.ToString("#0.00");
+            lblDiscount2.Text = frmPizza.dDiscount.ToString("#0.00");
+            lblTotal2.Text = frmPizza.dSubTotal.ToString("#0.00");
+            lblSubtotal2.Text = frmPizza.dTotal.ToString("#0.00");
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
@@ -56,7 +57,7 @@ namespace LisburnPizzabois
             DialogResult userresponse;
             PrintDialog.Document = printDocument1;
             userresponse = printDialog1.ShowDialog();
-            if (userresponse = System.Windows.Forms.DialogResult.OK)
+            if (userresponse == System.Windows.Forms.DialogResult.OK)
             {
                 printDocument1.Print();
             }
@@ -95,9 +96,15 @@ namespace LisburnPizzabois
             Single hPos = 0;
 
             //font
-            Font fontMedium = newFont("Arial", 14);
+            Font fontMedium = new Font("Arial", 14);
             Font fontLargeBold = new
-                   Font("Arial", 14);
+                   Font("Arial", 36, FontStyle.Bold);
+
+            //Brush
+            Brush brushBlue = new SolidBrush(Color.Blue);
+            Brush brushBlack = Brushes.Black;
+
         }
+
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace LisburnPizzabois
+﻿using System;
+
+namespace LisburnPizzabois
 {
     partial class frmInvoice
     {
@@ -38,6 +40,12 @@
             this.lblDiscountD = new System.Windows.Forms.Label();
             this.lblSubtotalD = new System.Windows.Forms.Label();
             this.btnPrint = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblSubtotal2 = new System.Windows.Forms.Label();
+            this.lblDiscount2 = new System.Windows.Forms.Label();
+            this.lblTotal2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnEnd
@@ -73,7 +81,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(126, 80);
+            this.label1.Location = new System.Drawing.Point(111, 80);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 3;
@@ -81,17 +89,15 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(126, 97);
+            this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Discount";
+            this.label2.Size = new System.Drawing.Size(100, 23);
+            this.label2.TabIndex = 10;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(126, 114);
+            this.label3.Location = new System.Drawing.Point(111, 114);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 5;
@@ -131,11 +137,71 @@
             this.btnPrint.UseVisualStyleBackColor = true;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(114, 97);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Discount";
+            // 
+            // lblSubtotal2
+            // 
+            this.lblSubtotal2.AutoSize = true;
+            this.lblSubtotal2.Location = new System.Drawing.Point(179, 80);
+            this.lblSubtotal2.Name = "lblSubtotal2";
+            this.lblSubtotal2.Size = new System.Drawing.Size(28, 13);
+            this.lblSubtotal2.TabIndex = 12;
+            this.lblSubtotal2.Text = "0.00";
+            // 
+            // lblDiscount2
+            // 
+            this.lblDiscount2.AutoSize = true;
+            this.lblDiscount2.Location = new System.Drawing.Point(179, 97);
+            this.lblDiscount2.Name = "lblDiscount2";
+            this.lblDiscount2.Size = new System.Drawing.Size(28, 13);
+            this.lblDiscount2.TabIndex = 13;
+            this.lblDiscount2.Text = "0.00";
+            // 
+            // lblTotal2
+            // 
+            this.lblTotal2.AutoSize = true;
+            this.lblTotal2.Location = new System.Drawing.Point(179, 114);
+            this.lblTotal2.Name = "lblTotal2";
+            this.lblTotal2.Size = new System.Drawing.Size(28, 13);
+            this.lblTotal2.TabIndex = 14;
+            this.lblTotal2.Text = "0.00";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(114, 64);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Name";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(182, 63);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(10, 13);
+            this.lblName.TabIndex = 16;
+            this.lblName.Text = ".";
+            // 
             // frmInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblTotal2);
+            this.Controls.Add(this.lblDiscount2);
+            this.Controls.Add(this.lblSubtotal2);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.lblSubtotalD);
             this.Controls.Add(this.lblDiscountD);
@@ -148,9 +214,15 @@
             this.Controls.Add(this.btnEnd);
             this.Name = "frmInvoice";
             this.Text = "frmInvoice";
+            this.Load += new System.EventHandler(this.frmInvoice_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void frmInvoice_Load(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
@@ -165,5 +237,11 @@
         private System.Windows.Forms.Label lblDiscountD;
         private System.Windows.Forms.Label lblSubtotalD;
         private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblSubtotal2;
+        private System.Windows.Forms.Label lblDiscount2;
+        private System.Windows.Forms.Label lblTotal2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblName;
     }
 }
