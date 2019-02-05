@@ -73,17 +73,23 @@ namespace LisburnPizzabois
             //local variable to store result
             DialogResult dr;
             //accept response
-            dr = MessageBox.Show("Are you sure you want to exit?",
-                "Confirm Exit",
+            dr = MessageBox.Show("Confirm Username & Password?", "Enter Lisburn Pizza bois",
             MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             //if yes then close program
             if (dr == DialogResult.Yes)
             {
-                Application.Exit();
+                /*frmPizza ThePizzaForm;
+                ThePizzaForm = new frmPizza();
+                ThePizzaForm.ShowDialog(); */
             }
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
