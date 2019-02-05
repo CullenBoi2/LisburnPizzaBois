@@ -30,13 +30,19 @@ namespace LisburnPizzabois
             //local variable to store result
             DialogResult dr;
             //accept response
-            dr = MessageBox.Show("Are you sure you want to exit",
-                "Confirm exit",
+            dr = MessageBox.Show("Are you sure",
+                "Confirm",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             //if yes then close program
+            if (dr == DialogResult.Yes)
+            {
+                txtUsername.Text = String.Empty;
+                txtPassword.Text = String.Empty;
+
+            }
             if (dr == DialogResult.No)
             {
-                Application.Exit();
+                return;
             }
         }
 
